@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:intl/intl.dart';
@@ -63,8 +64,14 @@ abstract class _ProductController with Store {
     uploadTask = null;
   }
 
+  Future delete() {
+    return model!.documentReference!.delete();
+  }
+
+  
+
   @action
-  void onSave() {
+  void onSaveProduct() {
     model!.rating == null || rating == 0
         ? model!.rating = 0
         : model!.rating = rating;
@@ -73,8 +80,11 @@ abstract class _ProductController with Store {
     price == 0 ? null : model!.price = price;
     type == '' ? null : model!.type = type;
     filename == '' ? null : model!.filename = filename;
-    model!.save();
+    save();
   }
+
+
+  
 
   @action
   Future selectFile() async {
@@ -125,5 +135,39 @@ abstract class _ProductController with Store {
   @action
   void setFilename(value) {
     filename = value;
+  }
+
+
+  Future save() async {
+    if (model!.documentReference == null) {
+      int total = await FirebaseFirestore.instance
+          .collection('products')
+          .get()
+          .then((value) => value.docs.length);
+      model!.documentReference =
+          await FirebaseFirestore.instance.collection('products').add(
+        {
+          'title': model!.title,
+          'type': model!.type,
+          'description': model!.description,
+          'filename': model!.filename,
+          'price': model!.price,
+          'rating': model!.rating,
+          'created': model!.created,
+          'id': total,
+        },
+      );
+    } else {
+      model!.documentReference!.update(
+        {
+          'title': model!.title,
+          'type': model!.type,
+          'price': model!.price,
+          'filename': model!.filename,
+          'rating': model!.rating,
+          'created': model!.created,
+        },
+      );
+    }
   }
 }
