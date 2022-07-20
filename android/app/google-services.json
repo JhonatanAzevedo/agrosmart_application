@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "478330206325",
+    "project_id": "agrosmarttest-2c3c1",
+    "storage_bucket": "agrosmarttest-2c3c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:478330206325:android:3fcd81c19f65664578203c",
+        "android_client_info": {
+          "package_name": "com.example.agrosmart_application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "478330206325-6hdq4g3lhvjddotbb05lnifkr2ggtlvj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZ2VNJTzuLIc6TSHqV7GcmOrE-ng1Z0XM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "478330206325-6hdq4g3lhvjddotbb05lnifkr2ggtlvj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "478330206325-s39usj945c1th5qc1hdo6agsh9oese08.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.agrosmartApplication"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
