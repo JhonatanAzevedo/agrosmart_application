@@ -29,13 +29,11 @@ Esse projeto encontra-se na arquitetura [Clean Dart](https://github.com/Fluttera
 ## 🎨 layout
 As imagens abaixo mostram as principais telas do aplicativo.
 
-<figure align="center">
-  <img src="" alt="Layout do aplicativo">
-  <figcaption>Principais telas do aplicativo</figcaption>
-</figure>
+<img src="https://user-images.githubusercontent.com/64289437/179879781-6d93ccdf-eb23-4633-b0b1-ba5a93d79f6a.png" width="250" height="480"> <img src="https://user-images.githubusercontent.com/64289437/179880510-aa2050ac-e724-4ff8-b07e-4b1fd1408907.png" width="250" height="480"> <img src="https://user-images.githubusercontent.com/64289437/179880342-af23dfbd-684e-4a66-af37-fd4eef2c5758.png" width="250" height="480"> 
 
-<br>
-<br>
+
+
+
 
 ---
 ## 🚀 Como executar o projeto
