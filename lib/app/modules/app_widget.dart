@@ -9,7 +9,6 @@ class AppWidget extends StatelessWidget {
     return MaterialApp.router(
       theme: ThemeData(
         primarySwatch: Colors.green,
-        primaryColor: Colors.red,
       ),
       debugShowCheckedModeBanner: false,
       routeInformationParser: Modular.routeInformationParser,

@@ -10,7 +10,7 @@ class HomeModule extends Module {
   @override
   List<Bind<Object>> get binds => [
         Bind(
-          (i) => HomeController(i()),
+          (i) => HomeController(i<IProductRepository>()),
         ),
         Bind<IProductRepository>(
           (i) =>
