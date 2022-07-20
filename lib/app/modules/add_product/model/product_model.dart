@@ -41,40 +41,4 @@ class ProductModel extends ProductEntity {
     );
   }
 
-  Future delete() {
-    return documentReference!.delete();
-  }
-
-  Future save() async {
-    if (documentReference == null) {
-      int total = await FirebaseFirestore.instance
-          .collection('products')
-          .get()
-          .then((value) => value.docs.length);
-      documentReference =
-          await FirebaseFirestore.instance.collection('products').add(
-        {
-          'title': title,
-          'type': type,
-          'description': description,
-          'filename': filename,
-          'price': price,
-          'rating': rating,
-          'created': created,
-          'id': total,
-        },
-      );
-    } else {
-      documentReference!.update(
-        {
-          'title': title,
-          'type': type,
-          'price': price,
-          'filename': filename,
-          'rating': rating,
-          'created': created,
-        },
-      );
-    }
-  }
 }
