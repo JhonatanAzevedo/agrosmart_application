@@ -201,8 +201,8 @@ class _ProductPageState extends ModularState<ProductPage, ProductController> {
                           onPressed: () async {
                             if (controller.pickdFile == null) {
                               if (_formKey.currentState!.validate()) {
-                                controller.onSave();
-                                onSucess();
+                                controller.onSaveProduct();
+                                onSucessEdite();
                               }
                             } else {
                               if (_formKey.currentState!.validate()) {
@@ -210,7 +210,7 @@ class _ProductPageState extends ModularState<ProductPage, ProductController> {
                                   onLoading();
                                 }
                                 await controller.uploadFile();
-                                controller.onSave();
+                                controller.onSaveProduct();
                                 Modular.to.pop();
                                 Modular.to.pop();
                               }
@@ -243,7 +243,7 @@ class _ProductPageState extends ModularState<ProductPage, ProductController> {
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    controller.model!.delete().then(
+                    controller.delete().then(
                       (value) {
                         onSucessDelete();
                       },
@@ -283,7 +283,7 @@ class _ProductPageState extends ModularState<ProductPage, ProductController> {
     );
   }
 
-  void onSucess() {
+  void onSucessEdite() {
     showDialog(
       context: context,
       builder: (BuildContext context) {

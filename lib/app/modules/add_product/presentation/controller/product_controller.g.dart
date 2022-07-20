@@ -189,11 +189,11 @@ mixin _$ProductController on _ProductController, Store {
       ActionController(name: '_ProductController', context: context);
 
   @override
-  void onSave() {
+  void onSaveProduct() {
     final _$actionInfo = _$_ProductControllerActionController.startAction(
-        name: '_ProductController.onSave');
+        name: '_ProductController.onSaveProduct');
     try {
-      return super.onSave();
+      return super.onSaveProduct();
     } finally {
       _$_ProductControllerActionController.endAction(_$actionInfo);
     }
