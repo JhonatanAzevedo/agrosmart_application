@@ -50,7 +50,7 @@ Além disto é bom ter um editor para trabalhar com o código, exemplo: [Android
 ```bash
 
 # Clone este repositório
-$ git clone https://github.com/dionlaranjeira/warrior_pets.git
+$ https://github.com/JhonatanAzevedo/agrosmart_application.git
 
 # Abra o projeto clonado com Android Studio ou outro editor de sua preferência
 
