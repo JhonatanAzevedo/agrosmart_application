@@ -39,7 +39,7 @@ class _ProductPageState extends ModularState<ProductPage, ProductController> {
         centerTitle: true,
         title: Text(
           controller.model!.title == null
-              ? 'Adicionar novo produtor'
+              ? 'Adicionar produto'
               : 'Editar produto',
           textAlign: TextAlign.center,
         ),
@@ -317,7 +317,7 @@ class _ProductPageState extends ModularState<ProductPage, ProductController> {
             behavior: SnackBarBehavior.floating,
             backgroundColor: Colors.green,
             content: Text(
-              'Produtor deletado com sucesso!',
+              'Produto deletado com sucesso!',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
               ),
